@@ -1,4 +1,5 @@
-import Accordion from './Accordion'; 
+import Accordion from './Accordion';
+import Star from '../images/icon-star.svg'; 
 
 export default function FAQPage() {
   const items = [
@@ -21,6 +22,7 @@ export default function FAQPage() {
 
   return(
     <div className='flex-container'>
+      <img src={Star} alt="star icon" />
       <h1>FAQs</h1>
       <h2>What is Frontend Mentor, and how will it help me?</h2>
       <p>Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.</p>

@@ -1,0 +1,10 @@
+body {
+  overflow: hidden;
+}
+#bg-pattern {
+  width: 100vw;
+  height: 200px;
+  background-image: url('./images/background-pattern-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
