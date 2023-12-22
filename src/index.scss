@@ -3,21 +3,20 @@
   src: url('https://fonts.gstatic.com/s/worksans/v9/nuFvD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qI.woff2') format('woff2');
 }
 
-:root {
-  --dark-purple: hsl(292, 42%, 14%);
-  --light-pink: hsl(275, 100%, 97%);
-  --white: hsl(0, 0%, 100%);
-  --grayish-purple: hsl(292, 16%, 49%);
-  --pink-purple: purple;
-  --light-gray: rgb(231, 231, 231);
-  --shadow-pink: rgb(201, 178, 206);
-}
+$dark-purple: hsl(292, 42%, 14%);
+$light-pink: hsl(275, 100%, 97%);
+$white: hsl(0, 0%, 100%);
+$grayish-purple: hsl(292, 16%, 49%);
+$pink-purple: purple;
+$light-gray: rgb(231, 231, 231);
+$shadow-pink: rgb(201, 178, 206);
+
 
 body {
   font-family: 'Work Sans', sans-serif;
   margin: 0;
   overflow: hidden;
-  color: var(--dark-purple);
+  color: $dark-purple;
 }
 
 .container {
@@ -39,20 +38,20 @@ body {
 .purple-background {
   width: 100%;
   height: 100%;
-  background-color: var(--light-pink);
+  background-color: $light-pink;
 }
 
 .main-content {
   font-size: 16px;
   font-weight: bold;
   border-radius: 15px;
-  box-shadow: 0 20px 25px -10px var(--shadow-pink);
+  box-shadow: 0 20px 25px -10px $shadow-pink;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) ;
   width: 500px;
-  background-color: var(--white);
+  background-color: $white;
   padding: 40px;
 }
 
@@ -67,7 +66,7 @@ h1 {
 }
 
 .faq-section {
-  border-bottom: 1px solid var(--light-gray);
+  border-bottom: 1px solid $light-gray;
 }
 
 .faq-section:last-child {
@@ -85,12 +84,12 @@ h1 {
 
 .label:hover {
   cursor: pointer;
-  color: var(--pink-purple);
+  color: $pink-purple;
 }
 
 .answer {
   font-weight: 100;
-  color: var(--grayish-purple);
+  color: $grayish-purple;
   padding-bottom: 30px;
   line-height: 30px;
 }
