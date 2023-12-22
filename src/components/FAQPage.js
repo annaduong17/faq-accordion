@@ -1,3 +1,5 @@
+import Accordion from './Accordion';
+
 export default function FAQPage() {
   const general = [
     {
@@ -135,7 +137,12 @@ export default function FAQPage() {
 
   return(
     <div>
-
+      <Accordion topic={general} />
+      <Accordion topic={account} />
+      <Accordion topic={subscription} />
+      <Accordion topic={challenge} />
+      <Accordion topic={solution} />
+      <Accordion topic={licensing} />
     </div>
   )
 }
