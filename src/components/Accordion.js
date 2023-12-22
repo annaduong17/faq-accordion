@@ -21,18 +21,15 @@ export default function Accordion({ section }) {
 
 
     return(
-      <div key={index} className="question">
-        <div className='label flex' onClick={() => handleClick(index)}>
-          <p>{question.label}</p> 
-          {icon}
-        </div>
-        {isExpanded && <div className='answer'>{question.answer}</div>}
+      <div key={index}>
+        <div onClick={() => handleClick(index)}>{question.label} {icon}</div>
+        {isExpanded && <div>{question.answer}</div>}
       </div>
     )
   });
 
   return(
-    <div className="section">
+    <div>
       <h2>{section.title}</h2>
       <div>{renderedItems}</div>
     </div>
