@@ -2,34 +2,36 @@ import { useState } from 'react';
 import MinusIcon from '../images/icon-minus.svg';
 import PlusIcon from '../images/icon-plus.svg';
 
-export default function Accordion({ items }) {
+export default function Accordion({ section }) {
   const [ expandedIndex, setExpandedIndex ] = useState(-1);
 
   const handleClick = (index) => {
-    if (index !== expandedIndex) {
-      setExpandedIndex(index);
-    } else {
+    if (expandedIndex === index) {
       setExpandedIndex(-1);
+    } else {
+      setExpandedIndex(index);
     }
   }
 
-  const renderedItems = items.map((item, index) => {
+  const renderedItems = section.content.map((question, index) => {
     const isExpanded = index === expandedIndex;
+    const icon = <img src={isExpanded ? MinusIcon : PlusIcon} alt="icon" />
 
-    const icon = <img src={isExpanded ? MinusIcon : PlusIcon} alt="" />
+    console.log(index);
+
 
     return(
-      <div key={index} className="faq-section">
-        <div className='label flex' onClick={() => handleClick(index)}>
-          <p>{item.label}</p> 
-          <span>{icon}</span>
-        </div>
-        {isExpanded && <div className='answer'>{item.content}</div>}
+      <div key={index}>
+        <div onClick={() => handleClick(index)}>{question.label} {icon}</div>
+        {isExpanded && <div>{question.answer}</div>}
       </div>
     )
   });
 
   return(
-    <div>{renderedItems}</div>
-  );
+    <div>
+      <h2>{section.title}</h2>
+      <div>{renderedItems}</div>
+    </div>
+  )
 }
