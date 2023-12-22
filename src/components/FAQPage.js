@@ -158,13 +158,19 @@ export default function FAQPage() {
 
   const renderedItems = items.map((section) => {
     return(
-      <Accordion key={section.id} section={section} />
+        <Accordion key={section.id} section={section} />
     )
-  })
+  });
 
   return(
-    <div>
-      {renderedItems}
+    <div className='container'>
+      <div className="background-image">
+        <h1>FAQ</h1>
+      </div>
+      <div className="purple-background"></div>
+      <div className='main-content'>
+        {renderedItems}
+      </div>
     </div>
   )
 }
