@@ -67,24 +67,24 @@ h1 {
 
 .faq-section {
   border-bottom: 1px solid $light-gray;
-}
 
-.faq-section:last-child {
-  border-bottom: none;
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .label {
   justify-content: space-between;
   padding-block: 10px;
-}
 
-.label p {
-  margin-right: 20px;
-}
+  p {
+    margin-right: 20px;
+  }
 
-.label:hover {
-  cursor: pointer;
-  color: $pink-purple;
+  &:hover {
+    cursor: pointer;
+    color: $pink-purple;
+  }
 }
 
 .answer {
@@ -93,6 +93,9 @@ h1 {
   padding-bottom: 30px;
   line-height: 30px;
 }
+
+
+
 
 @media (max-width: 500px) {
   h1 {
