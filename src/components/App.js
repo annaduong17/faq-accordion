@@ -2,12 +2,10 @@ import FAQPage from './FAQPage';
 
 export default function App() {
   return(
-    <div>
-      <div id='bg-pattern'></div>
-      <div id='bg-solid'>purple</div>
-    <div>
+    <div className='container'>
+      <div className="background-image"></div>
+      <div className="purple-background"></div>
       <FAQPage />
-    </div>
     </div>
   );
 }

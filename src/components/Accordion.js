@@ -19,12 +19,12 @@ export default function Accordion({ items }) {
     const icon = <img src={isExpanded ? MinusIcon : PlusIcon} alt="" />
 
     return(
-      <div key={index}>
-        <div onClick={() => handleClick(index)}>
+      <div key={index} className="faq-section">
+        <div className='label flex' onClick={() => handleClick(index)}>
           <p>{item.label}</p> 
           <span>{icon}</span>
         </div>
-        {isExpanded && <div>{item.content}</div>}
+        {isExpanded && <div className='answer'>{item.content}</div>}
       </div>
     )
   });
